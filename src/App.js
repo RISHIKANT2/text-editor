@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import Navbar from "./navbar";
 import Form from "./textArea";
-import About from "./about";
-
 
 function App(){
   const [color,setcolor]= useState();
@@ -26,7 +24,6 @@ setcolor1(value1);
     <>
    
     <Navbar  color01= {color} color02={color1} fun1={colorHandler} fun2={colorHandler2} />
-     <About />
      <Form />
     </>
     
