@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Navbar from "./navbar";
+import Form from "./textArea";
+import About from "./about";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+function App(){
+  const [color,setcolor]= useState();
+  const [color1,setcolor1]= useState();
+
+  function colorHandler(){
+  const value= document.getElementById('colorBox').value;
+  setcolor(value);
+
+  document.body.style.backgroundColor=color;   
 }
+function colorHandler2(){
+const value1= document.getElementById('colorBox1').value;
+setcolor1(value1);
+
+}
+
+    
+
+  return (
+    <>
+    <Navbar  color01= {color} color02={color1} fun1={colorHandler} fun2={colorHandler2} />
+    </>
+    
+  )  
+};
 
 export default App;
