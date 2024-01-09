@@ -2,12 +2,7 @@ import React, { useState } from "react";
 import Navbar from "./navbar";
 import Form from "./textArea";
 import About from "./about";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
- 
-} from "react-router-dom";
+
 
 function App(){
   const [color,setcolor]= useState();
